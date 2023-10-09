@@ -1,0 +1,63 @@
+.submit-container{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;  
+    position: relative;
+    background-color: hsl(216, 12%, 8%);
+    color: white;
+    display: flex;
+}
+
+.submit-wrapper{
+    align-self: center;
+    margin: auto;
+    width: 330px;
+    padding: 2em;
+    border-radius: 2em;
+    background: linear-gradient(to bottom, hsla(213, 20%, 18%, 0.921) 0%, hsla(213, 20%, 18%, 0.5) 100%);
+}
+
+.submit-image{
+    margin: 1em;
+}
+
+.submit-result{
+    margin: 2em auto;
+    padding: 0.3em;
+    background-color:rgba(255, 255, 255, 0.05);
+    border-radius: 1em;
+    color: rgb(255, 132, 44);
+    width: 12em;
+    font-size: 14px;
+}
+
+.submit-text{
+    margin: 1.5em auto;
+}
+
+.submit-heading{
+    margin: 0.5em auto;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.submit-desc{
+    margin: 0 0 0 0.5em;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color:hsl(216, 12%, 54%);
+    
+}
+
+.attribution{
+    position: absolute;
+    color:hsl(216, 12%, 54%);
+    bottom: 0;
+    width: 100%;
+}
+
+.attribution a{
+    color: rgb(46, 26, 134);
+    text-decoration: none;
+}
