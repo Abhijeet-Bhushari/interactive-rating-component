@@ -99,9 +99,12 @@
     bottom: 0;
     width: 100%;
     text-align: center;   
+    font-size: 14px;
 }
 
 .attribution a{
-    color: rgb(46, 26, 134);
+    color: hsl(25, 97%, 53%);
     text-decoration: none;
 }
+
+/* @media screen and () */

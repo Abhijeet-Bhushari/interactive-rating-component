@@ -19,8 +19,7 @@ export default function SubmitRating(props) {
         </div>
       </div>
       <div className="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend
         </a>
         . Coded by <a href="#">Abhijeet-Bhushari</a>.
