@@ -4,17 +4,25 @@ import SubmitRating from './SubmitRating'
 
 export default function Rating(props) {
   let stars = -1;
+  let starEl;
   function handleClick(){
     if(stars === -1) alert("Please select a rating");
     else {
       console.log(props);
-      props.toggleBool();
+      props.changeRating(stars);
     }
   }
 
-  function countStars(num){
+  function countStars(num, id){
     stars = num;
-    console.log(stars);
+    console.log(typeof starEl);
+    if(starEl){
+      starEl.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+      starEl.style.color = 'hsl(216, 12%, 54%)';
+    }
+    starEl = document.getElementById(id);
+    starEl.style.backgroundColor = 'hsl(25, 97%, 53%)';
+    starEl.style.color = '#fff';
   }
 
   return (
@@ -31,11 +39,11 @@ export default function Rating(props) {
             </div>
           </div>
           <div className="rating-stars">
-            <button className="rating-star" id="1-star" onClick={()=>countStars(1)}>1</button>
-            <button className="rating-star" id="2-star" onClick={()=>countStars(2)}>2</button>
-            <button className="rating-star" id="3-star" onClick={()=>countStars(3)}>3</button>
-            <button className="rating-star" id="4-star" onClick={()=>countStars(4)}>4</button>
-            <button className="rating-star" id="5-star" onClick={()=>countStars(5)}>5</button>
+            <button className="rating-star" id="1-star" onClick={()=>countStars(1, "1-star")}>1</button>
+            <button className="rating-star" id="2-star" onClick={()=>countStars(2, "2-star")}>2</button>
+            <button className="rating-star" id="3-star" onClick={()=>countStars(3, "3-star")}>3</button>
+            <button className="rating-star" id="4-star" onClick={()=>countStars(4, "4-star")}>4</button>
+            <button className="rating-star" id="5-star" onClick={()=>countStars(5, "5-star")}>5</button>
           </div>
           <button className="rating-button" onClick={()=>handleClick()}>SUBMIT</button>
         </div>

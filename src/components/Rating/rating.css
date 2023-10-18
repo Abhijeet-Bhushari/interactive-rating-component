@@ -67,13 +67,9 @@
 
 .rating-star:hover{
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
     color: white;
     transition: 0.3s;
-}
-
-.rating-star:focus{
-    background-color: hsl(25, 97%, 53%);
-    color: #fff;
 }
 
 .rating-button{
@@ -92,13 +88,9 @@
 
 .rating-button:hover{
     background-color: white;
+    cursor: pointer;
     color: hsl(25, 97%, 53%);
     transition: 0.3s;
-}
-
-.rating-button:focus{
-    background-color: white;
-    color: hsl(25, 97%, 53%)
 }
 
 .attribution{

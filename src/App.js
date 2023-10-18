@@ -4,11 +4,11 @@ import { useState } from 'react';
 import Rating from './components/Rating/Rating'
 import SubmitRating from './components/Rating/SubmitRating'
 function App() {
-  const [myBool, setmyBool] = useState(true);
-  function toggleBool(){
-    setmyBool(!myBool);
+  const [rating, setRating] = useState(-1);
+  function changeRating(num){
+    setRating(num);
   }
-  return myBool ? <Rating toggleBool = {toggleBool}/> : <SubmitRating/>; 
+  return rating == -1 ? <Rating changeRating = {changeRating}/> : <SubmitRating rating = {rating}/>; 
 }
 
 export default App;
