@@ -1,11 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import "./rating.css";
+import SubmitRating from './SubmitRating'
 
-export default function Rating() {
-  //     1 2 3 4 5
-  //   Submit You selected out of 5 Thank you! We appreciate you taking the time
-  //   to give a rating. If you ever need more support, don’t hesitate to get in
-  //   touch!
+export default function Rating(props) {
+  let stars = -1;
+  function handleClick(){
+    if(stars === -1) alert("Please select a rating");
+    else {
+      console.log(props);
+      props.toggleBool();
+    }
+  }
+
+  function countStars(num){
+    stars = num;
+    console.log(stars);
+  }
 
   return (
       <div className="rating-container">
@@ -21,13 +31,13 @@ export default function Rating() {
             </div>
           </div>
           <div className="rating-stars">
-            <button className="rating-star">1</button>
-            <button className="rating-star">2</button>
-            <button className="rating-star">3</button>
-            <button className="rating-star">4</button>
-            <button className="rating-star">5</button>
+            <button className="rating-star" id="1-star" onClick={()=>countStars(1)}>1</button>
+            <button className="rating-star" id="2-star" onClick={()=>countStars(2)}>2</button>
+            <button className="rating-star" id="3-star" onClick={()=>countStars(3)}>3</button>
+            <button className="rating-star" id="4-star" onClick={()=>countStars(4)}>4</button>
+            <button className="rating-star" id="5-star" onClick={()=>countStars(5)}>5</button>
           </div>
-          <button className="rating-button">SUBMIT</button>
+          <button className="rating-button" onClick={()=>handleClick()}>SUBMIT</button>
         </div>
 
         <div className="attribution">

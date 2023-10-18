@@ -12,8 +12,10 @@
     align-self: center;
     margin: auto;
     width: 330px;
+    height: 345px;
     padding: 2em;
     border-radius: 2em;
+    text-align: center;
     background: linear-gradient(to bottom, hsla(213, 20%, 18%, 0.921) 0%, hsla(213, 20%, 18%, 0.5) 100%);
 }
 
@@ -28,11 +30,11 @@
     border-radius: 1em;
     color: rgb(255, 132, 44);
     width: 12em;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .submit-text{
-    margin: 1.5em auto;
+    margin: 1.5em auto 1em auto;
 }
 
 .submit-heading{
@@ -42,12 +44,12 @@
 }
 
 .submit-desc{
-    margin: 0 0 0 0.5em;
+    margin: 0 auto 0 auto;
     font-size: 14px;
+    width: 325px;
     font-weight: 600;
     line-height: 22px;
     color:hsl(216, 12%, 54%);
-    
 }
 
 .attribution{
@@ -55,6 +57,7 @@
     color:hsl(216, 12%, 54%);
     bottom: 0;
     width: 100%;
+    text-align: center;
 }
 
 .attribution a{
