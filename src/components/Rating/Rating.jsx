@@ -1,18 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import "./rating.css";
+import SubmitRating from './SubmitRating'
 
-export default function Rating() {
-  //     1 2 3 4 5
-  //   Submit You selected out of 5 Thank you! We appreciate you taking the time
-  //   to give a rating. If you ever need more support, don’t hesitate to get in
-  //   touch!
+export default function Rating(props) {
+  let stars = -1;
+  let starEl;
+  function handleClick(){
+    if(stars === -1) alert("Please select a rating");
+    else {
+      console.log(props);
+      props.changeRating(stars);
+    }
+  }
+
+  function countStars(num, id){
+    stars = num;
+    console.log(typeof starEl);
+    if(starEl){
+      starEl.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+      starEl.style.color = 'hsl(216, 12%, 54%)';
+    }
+    starEl = document.getElementById(id);
+    starEl.style.backgroundColor = 'hsl(25, 97%, 53%)';
+    starEl.style.color = '#fff';
+  }
 
   return (
-    <div>
       <div className="rating-container">
         <div className="rating-wrapper">
           <div className="rating-icon">
-            <img src="../../images/icon-star.svg" alt="" />
+            <svg width="17" height="16" xmlns="http://www.w3.org/2000/svg"><path d="m9.067.43 1.99 4.031c.112.228.33.386.58.422l4.45.647a.772.772 0 0 1 .427 1.316l-3.22 3.138a.773.773 0 0 0-.222.683l.76 4.431a.772.772 0 0 1-1.12.813l-3.98-2.092a.773.773 0 0 0-.718 0l-3.98 2.092a.772.772 0 0 1-1.119-.813l.76-4.431a.77.77 0 0 0-.222-.683L.233 6.846A.772.772 0 0 1 .661 5.53l4.449-.647a.772.772 0 0 0 .58-.422L7.68.43a.774.774 0 0 1 1.387 0Z" fill="#FC7614"/></svg>
           </div>
           <div className="rating-text">
             <div className="rating-heading">How did we do?</div>
@@ -22,23 +39,22 @@ export default function Rating() {
             </div>
           </div>
           <div className="rating-stars">
-            <button className="rating-star">1</button>
-            <button className="rating-star">2</button>
-            <button className="rating-star">3</button>
-            <button className="rating-star">4</button>
-            <button className="rating-star">5</button>
+            <button className="rating-star" id="1-star" onClick={()=>countStars(1, "1-star")}>1</button>
+            <button className="rating-star" id="2-star" onClick={()=>countStars(2, "2-star")}>2</button>
+            <button className="rating-star" id="3-star" onClick={()=>countStars(3, "3-star")}>3</button>
+            <button className="rating-star" id="4-star" onClick={()=>countStars(4, "4-star")}>4</button>
+            <button className="rating-star" id="5-star" onClick={()=>countStars(5, "5-star")}>5</button>
           </div>
-          <button className="rating-button">SUBMIT</button>
+          <button className="rating-button" onClick={()=>handleClick()}>SUBMIT</button>
         </div>
 
         <div className="attribution">
-          Challenge by
+          Challenge by 
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-            Frontend Mentor
+            Frontend
           </a>
-          . Coded by <a href="#">Your Name Here</a>.
+          . Coded by <a href="#">Abhijeet-Bhushari</a>.
         </div>
       </div>
-    </div>
   );
 }

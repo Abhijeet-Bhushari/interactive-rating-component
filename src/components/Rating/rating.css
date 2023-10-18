@@ -9,9 +9,10 @@
 }
 
 .rating-wrapper{
-    width: 370px;
+    width: 330px;
+    height: 345px;
     margin: auto;
-    padding: 2.1em;
+    padding: 2em;
     border-radius: 2em;
     justify-content: center;
     background: linear-gradient(to bottom, hsla(213, 20%, 18%, 0.921) 0%, hsla(213, 20%, 18%, 0.5) 100%);
@@ -20,54 +21,60 @@
 .rating-icon{
     width: 2.5em;
     height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.rating-icon img{
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .rating-text{
     text-align: left;
-    padding: 1em 0;
+    padding: 0.8em 0 0.5em 0;
 }
 
 .rating-heading{
     font-size: 1.7em;
     font-weight: 600;
-    margin: 0.5em 0;
+    margin: 0.5em 0 0.4em 0;
 }
 
 .rating-desc{
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 500;
     line-height: 26px;
     color: hsl(216, 12%, 54%);
 }
 
 .rating-stars{
-    margin: 1.3em 0;
+    margin: 1.2em 0;
     display: flex;
     justify-content: space-between;
 }
 
 .rating-star{
-    height: 3.4em;
-    width: 3.4em;
-    line-height: 3.4em;
+    height: 2.9em;
+    width: 2.9em;
+    line-height: 2.9em;
     font-size: 16px;
     font-weight: 700;
     color:hsl(216, 12%, 54%);
     border: none;
     text-align: center;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.rating-star:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
 }
 
 .rating-button{
-    padding: 1em 0;
-    margin: 0.4em 0 0 0;
+    padding: 0.8em 0;
+    margin: 1em 0 0 0;
     width: 100%;
     background-color: hsl(25, 97%, 53%);
     color: white;
@@ -76,10 +83,25 @@
     letter-spacing: 2px;
     border-radius: 50px;
     border: none;
+    transition: 0.3s;
+}
+
+.rating-button:hover{
+    background-color: white;
+    cursor: pointer;
+    color: hsl(25, 97%, 53%);
+    transition: 0.3s;
 }
 
 .attribution{
     position: absolute;
+    color:hsl(216, 12%, 54%);
     bottom: 0;
     width: 100%;
+    text-align: center;   
+}
+
+.attribution a{
+    color: rgb(46, 26, 134);
+    text-decoration: none;
 }
