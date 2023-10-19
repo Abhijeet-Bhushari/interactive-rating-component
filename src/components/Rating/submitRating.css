@@ -64,3 +64,47 @@
     color: hsl(25, 97%, 53%);
     text-decoration: none;
 }
+
+@media screen and (max-width: 500px){
+    .submit-wrapper{
+        width: 302px;
+        height: 313px;
+        padding: 0.8em;
+        border-radius: 1em;
+    }
+    
+    .submit-image{
+        margin: 1em;
+    }
+
+    svg{
+        transform: scale(0.9)
+    }
+    
+    .submit-result{
+        margin: 0 auto;
+        padding: 0.3em;
+        line-height: 1.7em;
+        border-radius: 1.5em;
+        width: 11em;
+        font-size: 14px;
+    }
+    
+    .submit-text{
+        margin: 1em auto 1em auto;
+    }
+    
+    .submit-heading{
+        margin: 0.5em auto 0.4em auto;
+        font-size: 23px;
+        font-weight: 600;
+    }
+    
+    .submit-desc{
+        margin: 0 auto 0 auto;
+        font-size: 14px;
+        width: 300px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+}
