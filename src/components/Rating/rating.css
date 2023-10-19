@@ -12,16 +12,17 @@
     width: 330px;
     height: 345px;
     margin: auto;
-    padding: 2em;
+    padding: 2em 2em;
+    padding-bottom: 1.9em;
     border-radius: 2em;
     justify-content: center;
     background: linear-gradient(to bottom, hsla(213, 20%, 18%, 0.921) 0%, hsla(213, 20%, 18%, 0.5) 100%);
 }
 
 .rating-icon{
-    width: 2.5em;
-    height: 2.5em;
-    line-height: 2.5em;
+    width: 2.7em;
+    height: 2.7em;
+    line-height: 2.9em;
     text-align: center;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.05);
@@ -29,7 +30,7 @@
 
 .rating-text{
     text-align: left;
-    padding: 0.8em 0 0.5em 0;
+    padding: 1.3em 0 0.5em 0;
 }
 
 .rating-heading{
@@ -41,7 +42,7 @@
 .rating-desc{
     font-size: 0.9em;
     font-weight: 500;
-    line-height: 26px;
+    line-height: 22px;
     color: hsl(216, 12%, 54%);
 }
 
@@ -52,9 +53,9 @@
 }
 
 .rating-star{
-    height: 2.9em;
-    width: 2.9em;
-    line-height: 2.9em;
+    height: 3.1em;
+    width: 3.1em;
+    line-height: 3.1em;
     font-size: 16px;
     font-weight: 700;
     color:hsl(216, 12%, 54%);
@@ -74,7 +75,7 @@
 
 .rating-button{
     padding: 0.8em 0;
-    margin: 1em 0 0 0;
+    margin: 0.7em 0 0 0;
     width: 100%;
     background-color: hsl(25, 97%, 53%);
     color: white;
